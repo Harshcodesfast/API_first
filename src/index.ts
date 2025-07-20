@@ -15,12 +15,6 @@ if (process.env.ENV == "local") {
   });
 }
 
-const handleRequest = serverless(app);
-
-export const handler = async (event: any, context: any) => {
-  return handleRequest(event, context);
-};
-
 app.get("/", (req, res) => {
   res.json({ message: "service is running" });
 });
